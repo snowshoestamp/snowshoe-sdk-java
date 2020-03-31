@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>SnowShoe Stamp Java SDK</display-name>
+  <description>
+  	An SDK for Java that can be used so your Java Servlet can easily access our stamp system.
+  </description>
+  
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <servlet>
+  	<servlet-name>receiver</servlet-name>
+  	<servlet-class>com.snowshoestamp.sdk.Receiver</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>receiver</servlet-name>
+    <url-pattern>/servlet/receiver</url-pattern>
+  </servlet-mapping>
+  
+</web-app>
