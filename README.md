@@ -5,27 +5,14 @@ with the SnowShoeStamp API. The included WAR file can be dropped in a Tomcat web
 
 ---
 
-Below are the few simple steps required to make this SDK work with Tomcat.
+Below are the few simple steps required to make this SDK work with Tomcat. This project is built to work simply with Eclipse and Tomcat 9.0.
 
-1. Once Tomcat has unpacked the WAR file, navigate to WEB-INF/src/com/snowshoestamp/sdk, and open 
-receiver.java
+1. The first thing to do is create your own app which you can learn more about [HERE](https://snowshoe.readme.io/v3.0/docs/part-1-create-a-snowshoe-application)
 
-2. In receiver.java, you will find two comments asking you to enter your app secret and app key. 
-These you can obtain by going to beta.snowshoestamp.com and registering an app. When you register
-your app, the callback url will be your domain and then /sssjavasdk/servlet/receiver, so if your webapp 
-directory is at www.yourdomain.com, your callback url will be 
-http://www.yourdomain.com/sssjavasdk/servlet/receiver
-Feel free to change this for your own implementation as necessary
+2. Make sure you get the API Key that you will need to run requests. You can learn more about the API Keys [HERE](https://snowshoe.readme.io/v3.0/docs/part-1-create-a-snowshoe-application#get-api-keys)
 
-3. Once you have entered your app secret and app key in the receiver file, open the redirect file, 
-and where you see the comment asking you to enter your app key again, do so.
+3. After you have done this, in the src there is a Receiver.java file and a place where you input your API Key at the top of the doPost() method. replace the 'ENTER_YOUR_API_KEY' with your API Key.
 
-4. At this point, you should be able to navigate on a touch screen device to www.yourdomain.com/sssjavasdk
-and see a link saying "Send me to the stamp screen". The basic functionality exhibited here is to
-illustrate that at some point in your app, you will need to send the user to our server. The address for this
-redirect is http://beta.snowshoestamp.com/api/v2/client/ &#60; your app key here &#62; /  You can achieve this redirect 
-however is most convenient for you. 
+4. You can now run the demo web applet using stamps that are connected to your app. If you are using Eclipse just run the app on server and it is ready to go as a stamp screen.
 
-5. If you click the link, you should be directed to our stamp screen. Stamp the screen, and
-it should post to the callback you entered, which will then print the response JSON out to the screen. 
-You will want to do something more robust with that JSON, but what you do with it is entirely up to you.
+5. To stamp the screen on a phone just connect to (serversLocalIP):8080/snowshoe-sdk-java/ and you can stamp that screen to see how it works.
